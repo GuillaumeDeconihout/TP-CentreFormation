@@ -23,6 +23,8 @@ public class Main {
 		String line = scanner.nextLine();
 		
 		System.out.println(line);
+		
+		scanner.close();
 	}
 
 }
