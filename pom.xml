@@ -8,10 +8,11 @@
 	<description>TP java pour illustrer spring - hibernate - maven</description>
 
 	<properties>
-		<version.java>1.6</version.java>
+		<version.java>1.7</version.java>
 		<hibernate.version>4.2.3.Final</hibernate.version>
 		<spring.version>3.2.3.RELEASE</spring.version>
 		<version.maven.jar.plugin>2.4</version.maven.jar.plugin>
+		<version.maven.compiler.plugin>2.5.1</version.maven.compiler.plugin>
 		<version.maven.exec.plugin>1.2.1</version.maven.exec.plugin>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -69,10 +70,28 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- Dépendance Hibernate (hibernate-core et hibernate-entitymanager)  -->
-		
+		<!-- Dépendance Hibernate (hibernate-core et hibernate-entitymanager) -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+
 		<!-- Base de données MYSQL -->
-		
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+		</dependency>
+
 		<!-- Junit -->
 
 		<dependency>
@@ -90,6 +109,15 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven.compiler.plugin}</version>
+				<configuration>
+					<source>${version.java}</source>
+					<target>${version.java}</target>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
