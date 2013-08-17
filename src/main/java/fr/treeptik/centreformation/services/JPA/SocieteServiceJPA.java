@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import fr.treeptik.centreformation.DAO.SocieteDAO;
@@ -12,6 +13,7 @@ import fr.treeptik.centreformation.exceptions.DAOException;
 import fr.treeptik.centreformation.exceptions.ServiceException;
 import fr.treeptik.centreformation.services.SocieteService;
 
+@Service
 public class SocieteServiceJPA implements SocieteService{
 	
 	@Autowired
