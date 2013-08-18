@@ -11,5 +11,7 @@ public interface SocieteService {
 	Societe findById(Integer Id) throws ServiceException;
 	void remove(Societe societe) throws ServiceException;
 	List<Societe> findAll() throws ServiceException;
-
+	List<Societe> findAllWithCommande() throws ServiceException;
+	List<Societe> findAllWithoutCommande() throws ServiceException;
+	List<Object[]> findIncomeBySociete() throws ServiceException;
 }

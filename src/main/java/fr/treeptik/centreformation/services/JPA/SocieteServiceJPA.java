@@ -55,11 +55,44 @@ public class SocieteServiceJPA implements SocieteService{
 	@Override
 	public List<Societe> findAll() throws ServiceException {
 		try {
-			List<Societe> societees = new ArrayList<>();
-			societees = societeDAO.findAll();
-			return societees;
+			List<Societe> societes = new ArrayList<>();
+			societes = societeDAO.findAll();
+			return societes;
 		} catch (DAOException e) {
 			throw new ServiceException(e.getMessage(), e.getCause());
 		}	
+	}
+
+	@Override
+	public List<Societe> findAllWithCommande() throws ServiceException {
+		try {
+			List<Societe> societes = new ArrayList<>();
+			societes = societeDAO.findAllWithCommande();
+			return societes;
+		} catch (DAOException e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}	
+	}
+
+	@Override
+	public List<Societe> findAllWithoutCommande() throws ServiceException {
+		try {
+			List<Societe> societes = new ArrayList<>();
+			societes = societeDAO.findAllWithoutCommande();
+			return societes;
+		} catch (DAOException e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}
+	}
+
+	@Override
+	public List<Object[]> findIncomeBySociete() throws ServiceException {
+		try {
+			List<Object[]> societes = new ArrayList<>();
+			societes = societeDAO.findIncomeBySociete();
+			return societes;
+		} catch (DAOException e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}
 	}
 }

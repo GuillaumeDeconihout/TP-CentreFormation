@@ -35,6 +35,7 @@ public class Commande implements Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Session session;
 	
+	@JoinColumn(name="numeroFacture")
 	@OneToOne(fetch=FetchType.LAZY)
 	private Facture facture;
 	
@@ -104,9 +105,5 @@ public class Commande implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
-	
 
 }
