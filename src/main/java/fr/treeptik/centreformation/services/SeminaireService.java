@@ -11,5 +11,7 @@ public interface SeminaireService {
 	Seminaire findById(Integer Id) throws ServiceException;
 	void remove(Seminaire seminaire) throws ServiceException;
 	List<Seminaire> findAll() throws ServiceException;
+	List<Object[]> findMostSuccessfull() throws ServiceException;
+	List<Seminaire> findbyCapacity(Integer placesMin) throws ServiceException;
 
 }

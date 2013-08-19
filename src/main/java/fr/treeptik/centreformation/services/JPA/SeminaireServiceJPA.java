@@ -62,4 +62,26 @@ public class SeminaireServiceJPA implements SeminaireService{
 			throw new ServiceException(e.getMessage(), e.getCause());
 		}	
 	}
+
+	@Override
+	public List<Object[]> findMostSuccessfull() throws ServiceException {
+		try {
+			List<Object[]> seminaires = new ArrayList<>(5);
+			seminaires = seminaireDAO.findMostSuccessfull();
+			return seminaires;
+		} catch (DAOException e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}
+	}
+
+	@Override
+	public List<Seminaire> findbyCapacity(Integer placesMin) throws ServiceException {
+		try {
+			List<Seminaire> seminaires = new ArrayList<>(5);
+			seminaires = seminaireDAO.findByCapcacity(placesMin);
+			return seminaires;
+		} catch (Exception e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}
+	}
 }
