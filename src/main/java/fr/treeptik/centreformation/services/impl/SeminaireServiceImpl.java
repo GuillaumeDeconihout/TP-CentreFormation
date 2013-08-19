@@ -1,4 +1,4 @@
-package fr.treeptik.centreformation.services.JPA;
+package fr.treeptik.centreformation.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import fr.treeptik.centreformation.exceptions.ServiceException;
 import fr.treeptik.centreformation.services.SeminaireService;
 
 @Service
-public class SeminaireServiceJPA implements SeminaireService{
+public class SeminaireServiceImpl implements SeminaireService{
 	
 	@Autowired
 	private SeminaireDAO seminaireDAO;

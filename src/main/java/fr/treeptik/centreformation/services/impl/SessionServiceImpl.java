@@ -1,4 +1,4 @@
-package fr.treeptik.centreformation.services.JPA;
+package fr.treeptik.centreformation.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import fr.treeptik.centreformation.exceptions.ServiceException;
 import fr.treeptik.centreformation.services.SessionService;
 
 @Service
-public class SessionServiceJPA implements SessionService{
+public class SessionServiceImpl implements SessionService{
 	
 	@Autowired
 	private SessionDAO sessionDAO;

@@ -1,4 +1,4 @@
-package fr.treeptik.centreformation.services.JPA;
+package fr.treeptik.centreformation.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import fr.treeptik.centreformation.exceptions.ServiceException;
 import fr.treeptik.centreformation.services.SocieteService;
 
 @Service
-public class SocieteServiceJPA implements SocieteService{
+public class SocieteServiceImpl implements SocieteService{
 	
 	@Autowired
 	private SocieteDAO societeDAO;

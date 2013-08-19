@@ -1,4 +1,4 @@
-package fr.treeptik.centreformation.services.JPA;
+package fr.treeptik.centreformation.services.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import fr.treeptik.centreformation.exceptions.ServiceException;
 import fr.treeptik.centreformation.services.CommandeService;
 
 @Service
-public class CommandeServiceJPA implements CommandeService{
+public class CommandeServiceImpl implements CommandeService{
 	
 	@Autowired
 	private CommandeDAO commandeDAO;
